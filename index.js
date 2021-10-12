@@ -5,8 +5,7 @@ const path = require('path')
 const generateMarkdown = require('./utils/generateMarkdown')
 
 // TODO: Create an array of questions for user input
-const questions = () => {
-    return inquirer.prompt([
+const questions = [
     {
         type: "input",
         name: "username",
@@ -61,30 +60,32 @@ const questions = () => {
         message: 'What is your email address to best contact you?'
         
       },
-])
+]
+
 .then(data => {
-    return generateMarkdown(data);
-})
-.then(pageMarkdown => {
-    return writeFile(pageMarkdown);
+    return writeToFile(data);
 })
 .catch(err => {
     console.log(err);
 })
 
-};
 
 
+console.log(questions);
     
     // fs.watchFilSync(path.join(process.cwd()))
 // TODO: Create a function to initialize app
 function init() {
     questions();
+    .then(function(data))
+    writeToFile('README.md', generateMarkdown(data) ) {
+        console.log(data);
+    }
 }
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+
 
 // Function call to initialize app
 
