@@ -68,6 +68,7 @@ const questions = [
 
 // takes user inputs and filename to create a file based on the parameters.
 function writeToFile(fileName,data) {
+   
 
     fs.writeFile(fileName, data, function(err) {
     if(err){
@@ -83,6 +84,7 @@ function writeToFile(fileName,data) {
 function init() {
     inquirer.prompt(questions)
     .then(function(data){
+         
     writeToFile('README.md', generateMarkdown(data));
         console.log(data);
     })

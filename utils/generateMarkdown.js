@@ -1,7 +1,18 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
+const licenseArr = ['MIT','Apache', 'GNU','BSD','ISC']
+
+
 function renderLicenseBadge(license) {
 
+  if(license === 'MIT'){
+      return "![GitHub license](https://img.shields.io/badge/license-MIT-black.svg)";
+  }else if(license === 'Apache'){
+    return "![GitHub license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)";
+
+  }
+
+  
 
 }
 
@@ -15,12 +26,15 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
-  Repo made by : https://github.com/${data.username}/${data.title} 
   
-  # <h1>Description</h1>
+  
+return `# ${data.title}
+   
+  
+  # Description
   ${data.description}
-  ${data.license}
+  # License Under
+  ${renderLicenseBadge(data.license)}
   # Table of Contents
   * [Installation](#Installation)
 
@@ -47,7 +61,7 @@ function generateMarkdown(data) {
 
   
   ## Contributors
-  List of Cnntributors : ${data.contributions}
+  List of Contributors : ${data.contributions}
   
   ## Questions
   If you have any questions about this app then contact me at ${data.email}
