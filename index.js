@@ -1,4 +1,4 @@
-// TODO: Include packages needed for this application
+//  packages needed for this application
 const fs = require('fs')
 const inquirer = require('inquirer')
 const path = require('path')
@@ -32,7 +32,7 @@ const questions = [
       },
     {
         type: "input",
-        name: "Usage",
+        name: "usage",
         message: "Explain the usage of your project?",
         
       },
@@ -62,31 +62,32 @@ const questions = [
       },
 ]
 
-.then(data => {
-    return writeToFile(data);
-})
-.catch(err => {
-    console.log(err);
-})
 
 
 
-console.log(questions);
-    
-    // fs.watchFilSync(path.join(process.cwd()))
-// TODO: Create a function to initialize app
-function init() {
-    questions();
-    .then(function(data))
-    writeToFile('README.md', generateMarkdown(data) ) {
-        console.log(data);
-    }
+
+// takes user inputs and filename to create a file based on the parameters.
+function writeToFile(fileName,data) {
+
+    fs.writeFile(fileName, data, function(err) {
+    if(err){
+        return console.log(err);
+} else {
+    console.log('wrtieFile Success.');
+}
+    })
 }
 
 
-// TODO: Create a function to write README file
+// fucntion that is called when to start the questions through the installed module inquirer
+function init() {
+    inquirer.prompt(questions)
+    .then(function(data){
+    writeToFile('README.md', generateMarkdown(data));
+        console.log(data);
+    })
+}
 
 
-// Function call to initialize app
-
+// intialize the app
 init();
