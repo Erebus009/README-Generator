@@ -45,7 +45,7 @@ const questions = [
     {
         type: "input",
         name: "contributions",
-        message: 'Contribution guidelines to give others?'
+        message: 'Put any contributors to the project here?'
         
       },
     {
