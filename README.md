@@ -3,6 +3,8 @@
   
   # Description
   A CLI application that takes user inputs from the command terminal and generates a professional github readme.md from the data entered by the user.
+  #
+   ![Alt](https://media3.giphy.com/media/ahDrWT6dIcwTdZuvYV/giphy.gif?cid=790b76116db85e5460dca98fb945e334d23a4e22f245450e&rid=giphy.gif&ct=g)
   # Licensed Under
   ![GitHub license](https://img.shields.io/badge/License-MIT-black.svg)
   # Table of Contents
