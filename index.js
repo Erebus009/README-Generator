@@ -80,7 +80,7 @@ function writeToFile(fileName,data) {
 }
 
 
-// fucntion that is called when to start the questions through the installed module inquirer
+// function that is called when to start the questions through the installed module inquirer
 function init() {
     inquirer.prompt(questions)
     .then(function(data){
