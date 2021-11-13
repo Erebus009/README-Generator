@@ -23,7 +23,9 @@
   * [Questions](#Questions)
 
   ## Installation
-  <code>copy the repo and run node index from the command terminal inside VSCode.</code>
+  
+          git clone https://github.com/Erebus009/README-Generator.git 
+          node index
   ## Usage
   <code>no usage tests at the moment</code>
   
