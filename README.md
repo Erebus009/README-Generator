@@ -25,6 +25,7 @@
   ## Installation
   
           git clone https://github.com/Erebus009/README-Generator.git 
+          npm i
           node index
   ## Usage
   <code>no usage tests at the moment</code>
